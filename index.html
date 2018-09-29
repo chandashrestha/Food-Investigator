@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+        <!-- This div will hold all of the buttons to trigger GIF generation -->
+          <div class="col-9" id="buttons">
+            <!-- <button type="button" class="btn btn-secondary" id="test">Test</button> -->
+          </div>
+          <!-- This div will hold the search box to add additional buttons -->
+          <div class="col-3">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="input" placeholder="Restaurant Name" aria-label="Add an animal" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" type="button" id="submit">Submit</button>
+                </div>
+                <br>
+                <div id="score"></div>
+                <div id="address"></div>
+              </div>
+          </div>
+        </div>
+    </div>
+
+</body>
+</html>
