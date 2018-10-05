@@ -42,36 +42,34 @@ function query(restaurant) {
 $(document).on("click", "#submit", function () {
   newRestaurant = $("#input").val().toUpperCase();
   query(newRestaurant);
-  codeAddress();
 });
 
-var map;
-function initMap() {
-    geocoder = new google.maps.Geocoder();
-    var latlng = new google.maps.LatLng(-34.397, 150.644);
-    var mapOptions = {
-      zoom: 8,
-      center: latlng
-    }
-    map = new google.maps.Map(document.getElementById('map'), mapOptions);
-  };
+
+$.ajax({
+  url: "https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyC_uDKyICtoBmf8pI2nW0o64vS9vjWE49k&address=5738vanderbiltdallastx",
+  method: "GET",
+})
+.then(function(response){
+  console.log(response.results[0].geometry.location)
+
+  var myLatLng = response.results[0].geometry.location
+
+  console.log(myLatLng)
 
 
-function codeAddress() {
-  var address = document.getElementById('address').value;
-  geocoder.geocode({ 'address': address }, function (results, status) {
-    if (status == 'OK') {
-      map.setCenter(results[0].geometry.location);
-      var marker = new google.maps.Marker({
-        map: map,
-        position: results[0].geometry.location
-      });
-    } else {
-      alert('Geocode was not successful for the following reason: ' + status);
-    }
+  
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: myLatLng,
+    zoom: 12
   });
-}
 
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Hello World!'
+  });
+
+});
 
 // $("#submit").on("click", function(){
 
