@@ -1,4 +1,13 @@
 #map {
     height: 150px;
     width: 150px;
+    margin: auto;
   }
+  .output{
+    margin: auto;
+    font-family: 'Suranna', serif;
+   font-size: 33pt;
+   position: center;
+   text-align: center;
+  }
+  
