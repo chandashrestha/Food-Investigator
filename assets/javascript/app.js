@@ -7,15 +7,18 @@
 
 
 // This syncs with our Firebase database
-// var config = {
-//   apiKey: "AIzaSyBmpXuhRwOwSgByzvBllXTh9U9fPUHxpWo",
-//   authDomain: "restaurantapi-3b03d.firebaseapp.com",
-//   databaseURL: "https://restaurantapi-3b03d.firebaseio.com",
-//   projectId: "restaurantapi-3b03d",
-//   storageBucket: "",
-//   messagingSenderId: "468305590353"
-// };
-// firebase.initializeApp(config);
+var config = {
+  apiKey: "AIzaSyBmpXuhRwOwSgByzvBllXTh9U9fPUHxpWo",
+  authDomain: "restaurantapi-3b03d.firebaseapp.com",
+  databaseURL: "https://restaurantapi-3b03d.firebaseio.com",
+  projectId: "restaurantapi-3b03d",
+  storageBucket: "",
+  messagingSenderId: "468305590353"
+};
+firebase.initializeApp(config);
+
+// This assigns the firebase database to the database variable
+var database = firebase.database();
 
 // This is the function that queries the Dallas Open Data API
 function query(restaurant) {
