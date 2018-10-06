@@ -64,6 +64,17 @@ function query(restaurant) {
   });
 };
 
+database.ref().on("child_added", function(childSnapshot) {
+
+ $("#hos").append(
+  "<tr>" +
+  "<td>" + childSnapshot.val().name + "</td>" +
+  "<td>" + childSnapshot.val().restAddress + "</td>" +
+  "<td>" + results + "</td>" +
+  "</tr>"
+ );
+});
+
 // This is an event handler that triggers the query function (calling the Dallas API) when a user clicks Submit button on the page
 $(document).on("click", "#submit", function () {
   // This captures the text that was entere in the input box and changes all the text to upper case, as the Dallas API requires upper case submissions
