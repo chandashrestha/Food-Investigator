@@ -1,23 +1,44 @@
 #map {
-    height: 250px;
-    width: 650px;
+    height: 350px;
+    width: 750px;
     margin: auto;
+    border-style: solid;
+    border-color:  #B42C1A;
+    border-radius: 25px;
   }
   .output{
-    margin: auto;
-    font-family: 'Suranna', serif;
-   font-size: 34pt;
-   position: center;
-   text-align: center;
+    margin-left: 40%;
+  font-family: 'Suranna', serif;
+   font-size: 19pt;
+   position: absolute;
+   margin-top: 31%;
+   font-weight: bold;
+   line-height: normal;
   }
   h3{
     text-align: center;
     font-family: 'Suranna', serif;
-    font-size: 12pt;
+    font-size: 15pt;
+    margin: auto;
   }
-  img{
+  p{
+    text-align: center;
+    font-family: 'Suranna', serif;
+    font-size: 15pt;
+    margin-bottom: auto;
+    padding: 0;
+  }
+  .img-decor{
     width: 80%;
     margin: auto;
     border-style: solid;
     border-color:  #B42C1A;
+    border-radius: 25px;
+    position: relative;
+  }
+  #results{
+    text-align: center;
+  }
+  #address{
+    text-align: center;
   }

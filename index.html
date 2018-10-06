@@ -6,16 +6,14 @@
     <title>Head Over Meals</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-<<<<<<< HEAD
-    <link href="https://fonts.googleapis.com/css?family=Lily+Script+One%7CPattaya%7CSuranna" rel="stylesheet">
-=======
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_uDKyICtoBmf8pI2nW0o64vS9vjWE49k"
     ></script>
->>>>>>> 9e24f6c47555c4228c71ec1784913bb0b007a55d
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
     <script src="assets/javascript/app.js"></script>
+
 </head>
 <body>
     <!--Beginning of HTML AND Bootstrap-->
@@ -59,18 +57,20 @@
                 </div>
                 <!--Main Background Image Here-->
                 
-                    <img src="assets/images/Project-1.jpg">
-                    <br>
-                    <br>
+                    <img class="img-decor" src="assets/images/Project-1.jpg">
                     <br>
               
-                     <div class="output">  
+                     <div class="output"> 
+                       <p>Sanitation Grade:</p> 
                       <div id="results">
                      </div>
+                     <p>Address:</p>
                       <div id="address">
                       </div>
                     </div> 
                       <div id="map"></div>
+                      <br>
+                      <br>
                       <br>
                       <br>
                       <footer>
