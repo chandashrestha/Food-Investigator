@@ -69,8 +69,8 @@ database.ref().on("child_added", function(childSnapshot) {
  $("#hos").append(
   "<tr>" +
   "<td>" + childSnapshot.val().name + "</td>" +
-  "<td>" + childSnapshot.val().restAddress + "</td>" +
-  "<td>" + results + "</td>" +
+  "<td>" + childSnapshot.val().address + "</td>" +
+  "<td>" + childSnapshot.val().results + "</td>" +
   "</tr>"
  );
 });
