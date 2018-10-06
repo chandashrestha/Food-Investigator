@@ -1,4 +1,23 @@
 #map {
-    height: 150px;
-    width: 150px;
+    height: 250px;
+    width: 650px;
+    margin: auto;
+  }
+  .output{
+    margin: auto;
+    font-family: 'Suranna', serif;
+   font-size: 34pt;
+   position: center;
+   text-align: center;
+  }
+  h3{
+    text-align: center;
+    font-family: 'Suranna', serif;
+    font-size: 12pt;
+  }
+  img{
+    width: 80%;
+    margin: auto;
+    border-style: solid;
+    border-color:  #B42C1A;
   }
