@@ -16,37 +16,26 @@ function query(restaurant) {
       "$limit": 100,
       "$$app_token": "cZCIb3I7r2cKcWJjDtVnJNGEg"
     }
-  }).done(function (data) {
+  }).then(function (data) {
     $("#results").text(data[data.length - 1].score);
-    $("#address").text(data[data.length - 1].site_address);
+    $("#address").text(data[data.length - 1].site_address + " " + data[data.length - 1].zip);
     console.log(data[data.length - 1].score);
     console.log(data[data.length - 1]);
-    console.log(data.length)
+    console.log(data.length);
+    var restAddress = (data[data.length - 1].site_address + " " + data[data.length - 1].zip);
+    console.log(restAddress);
+    map(restAddress)
   });
 };
-
-// function query2 () {
-// $.ajax({
-//   url: "https://api.yelp.com/v3/businesses/search?term=dodie's&location=75206",
-//   type: "GET",
-//   headers: {
-//     "authorization" : "yKDe0xglbZ0FaxN-kTSoi2GJLo5lyRk1n5gthGSoRef_BZ-QdBWAYeuNv4Tpk5Oe5Pf90S8wb2vpP-W64XtXvAWziqarzyQPP_22o2wIkjewt1ZkxU1d1q2s9w-0W3Yx"
-//   }
-// }).done(function(data) {
-// console.log(data);
-// });
-// };
-
-// query2();
 
 $(document).on("click", "#submit", function () {
   newRestaurant = $("#input").val().toUpperCase();
   query(newRestaurant);
 });
 
-
+function map (restAddress) {
 $.ajax({
-  url: "https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyC_uDKyICtoBmf8pI2nW0o64vS9vjWE49k&address=5738vanderbiltdallastx",
+  url: "https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyC_uDKyICtoBmf8pI2nW0o64vS9vjWE49k&address=" + restAddress,
   method: "GET",
 })
 .then(function(response){
@@ -55,8 +44,6 @@ $.ajax({
   var myLatLng = response.results[0].geometry.location
 
   console.log(myLatLng)
-
-
   
   var map = new google.maps.Map(document.getElementById('map'), {
     center: myLatLng,
@@ -70,7 +57,7 @@ $.ajax({
   });
 
 });
-
+};
 // $("#submit").on("click", function(){
 
 // });
