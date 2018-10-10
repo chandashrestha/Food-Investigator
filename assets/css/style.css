@@ -20,7 +20,7 @@
   font-family: "Suranna", serif;
   font-size: 19pt;
   position: absolute;
-  margin-top: 31%;
+  margin-top: 28%;
   font-weight: bold;
   line-height: normal;
   width: 300px;
@@ -137,4 +137,40 @@ td {
 @keyframes mymove {
   from {left: 200px;}
   to {left: 980px;}
+}
+/* media tags */
+@media screen and (max-width: 768px) {
+  #map {
+      max-width: 100%;
+  }
+  .output {
+ max-width: 100%;
+  }
+  #loading {
+  max-width: 100%;
+}
+#results{
+  max-width: 100%;
+}
+#address{
+  max-width: 100%;
+}
+}
+
+@media screen and (max-width: 600px) {
+  #map {
+      max-width: 100%;
+  }
+  .output {
+ max-width: 100%;
+  }
+  #loading {
+    max-width: 100%;
+  }
+  #results{
+    max-width: 100%;
+  }
+  #address{
+    max-width: 100%;
+  }
 }
