@@ -1,103 +1,99 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Head Over Meals</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_uDKyICtoBmf8pI2nW0o64vS9vjWE49k"
-    ></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
-    <script src="assets/javascript/app.js"></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Head Over Meals</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" /> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_uDKyICtoBmf8pI2nW0o64vS9vjWE49k"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+  <script src="assets/javascript/app.js"></script>
 
 </head>
-<body>
-    <!--Beginning of HTML AND Bootstrap-->
-        <div class="card">
-                <div class="card-body">
-                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                                <a class="navbar-brand" href="#">Head Over Meals</a>
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                  <span class="navbar-toggler-icon"></span>
-                                </button>
-                              
-                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                  <ul class="navbar-nav mr-auto">
-                                    <li class="nav-item active">
-                                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                                    </li>
-                                    <li class="nav-item">
-                                      <a class="nav-link" href="index2.html">Hall of Shame</a>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Dropdown
-                                      </a>
-                                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#">Something else here</a>
-                                      </div>
-                                    </li>
-                                    <li class="nav-item">
-                                      <a class="nav-link disabled" href="#">Disabled</a>
-                                    </li>
-                                  </ul>
-                                  <form class="form-inline my-2 my-lg-0">
-                                    <input class="form-control mr-sm-2" id ="input" type="search" placeholder="Restaurant Name" aria-label="Search">
-                                    <button class="btn btn-outline-success my-2 my-sm-0" id ="submit" type="button">Submit</button>
-                                  </form>
-                                </div>
-                              </nav>
-                </div>
-                <!--Main Background Image Here-->
-                
-                    <img class="img-decor" src="assets/images/Project-1.jpg">
-                    <br>
-              
-                     <div class="output"> 
-                       <p>Inspection Grade:</p> 
-                      <div id="results">
-                     </div>
-                     <p>Address:</p>
-                      <div id="address">
-                      </div>
-                    </div> 
-                      <div id="map"></div>
-                      <br>
-                      <br>
-                      <br>
-                      <br>
-                      <footer>
-                        <h3>Team 3&copy;</h3>
-                      </footer>
-                      
-                   
 
-                    
- </body>
- 
-<script async defer
-   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_uDKyICtoBmf8pI2nW0o64vS9vjWE49k&callback=initMap">
- </script>
+<body>
+  <!--Beginning of HTML AND Bootstrap-->
+  <div class="card">
+    <div class="card-body">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <p class="navbar-brand" href="#">Head Over Meals</p>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index2.html">Hall of Shame</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" id="input" type="search" placeholder="Restaurant Name" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" id="submit" type="button">Submit</button>
+          </form>
+        </div>
+      </nav>
+    </div>
+    <!--Main Background Image Here-->
+
+    <img class="img-decor" src="assets/images/Project-1.jpg">
+    <br>
+
+    <div class="output">
+      <p>Inspection Grade:</p>
+      <div id="results">
+      </div>
+      <p>Address:</p>
+      <div id="address">
+      </div>
+    </div>
+    
+    <div id="map">
+      <br>
+      <br>
+      <img id="loading" src="assets/images/507e92e1d92210aac1a7130c8757a0dd.gif" height="250" width="550">
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+      <h3>Team 3&copy;</h3>
+    </footer>
+  </div>
+
+
+
+
+</body>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_uDKyICtoBmf8pI2nW0o64vS9vjWE49k&callback=initMap">
+</script>
 
 <style>
   /* Always set the map height explicitly to define the size of the div
    * element that contains the map. */
+
   /* #map {
     height: 100%;
   } */
+
   /* Optional: Makes the sample page fill the window. */
-  html, body {
+
+  /* html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-  }
+  } */
 </style>
 
 
