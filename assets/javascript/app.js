@@ -51,13 +51,15 @@ function query(restaurant) {
     var restAddress =
       data[data.length - 1].site_address + " " + data[data.length - 1].zip;
     console.log(restAddress);
-    // Ths runs the map function, which holds the ajax call to the Google Map API. This function is a "pure function" and the dynamic restAddress is passed through the function
+    // This runs the map function, which holds the ajax call to the Google Map API. This function is a "pure function" and the dynamic restAddress is passed through the function
     map(restAddress);
 
+    //Ths stores restaurant name and score from the API in to variables that will be used to push data to Firebase
     name = data[data.length - 1].program_identifier;
     results = data[data.length - 1].score;
     console.log(name);
 
+    //This pushes restaurant name, address, and inspection score in to the Firebase database
     database.ref().push({
       name: name,
       address: restAddress,
@@ -67,6 +69,7 @@ function query(restaurant) {
   });
 }
 
+//This is an event handler that listens for updates to the Firebase database. We added ".orderByChild("results")" to list the Firebase children by the results value
 database
   .ref()
   .orderByChild("results")
