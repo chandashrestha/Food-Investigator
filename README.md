@@ -1,11 +1,11 @@
 # SMU-Project-1
 API-nism
 
-link: https://chandashrestha.github.io/SMU-Project-1/
+link: https://chandashrestha.github.io/Food-Investigator/
 
-Application’s concept: 
+Application’s concept: To provide a shared space for the consumers Restaurant and Food Establishment Inspections (October 2016 to Present) and the location. To help the restaurant business. 
 
-The motivation for its development:
+The motivation for its development: Several times I go to a restaurant in a different location and end up not liking the service and food.
 
 Your design process:
 
